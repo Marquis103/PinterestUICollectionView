@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zyh-ad-FlB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Stream View Controller-->
+        <scene sceneID="kqS-Pz-3ln">
+            <objects>
+                <collectionViewController id="Zyh-ad-FlB" customClass="PhotoStreamViewController" customModule="Pinterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GoS-NR-1au">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="yYv-WS-UFP" customClass="PinterestLayout" customModule="Pinterest" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnnotatedPhotoCell" id="YvZ-ba-bjz" customClass="AnnotatedPhotoCell" customModule="Pinterest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVa-rh-7GH" customClass="RoundedCornersView" customModule="Pinterest" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xer-42-YPU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <color key="backgroundColor" red="0.0010088910862944527" green="0.35530849358974359" blue="0.0015653863803578275" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="dkm-p3-XyG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGc-dD-fP9">
+                                                    <rect key="frame" x="4" y="204" width="192" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="PCP-zW-g3c"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-ZI-KHc">
+                                                    <rect key="frame" x="4" y="225" width="192" height="14"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0010088910859999999" green="0.3553084936" blue="0.00156538638" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="bGc-dD-fP9" secondAttribute="bottom" constant="4" id="5IW-zH-d5y"/>
+                                                <constraint firstItem="bGc-dD-fP9" firstAttribute="leading" secondItem="gVa-rh-7GH" secondAttribute="leading" constant="4" id="5vI-iu-ogo"/>
+                                                <constraint firstItem="3Kc-ZI-KHc" firstAttribute="leading" secondItem="gVa-rh-7GH" secondAttribute="leading" constant="4" id="5w4-qI-QaO"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Kc-ZI-KHc" secondAttribute="trailing" constant="4" id="BGg-0l-RE0"/>
+                                                <constraint firstItem="bGc-dD-fP9" firstAttribute="top" secondItem="Xer-42-YPU" secondAttribute="bottom" constant="4" id="CVb-tY-sEi"/>
+                                                <constraint firstItem="Xer-42-YPU" firstAttribute="leading" secondItem="gVa-rh-7GH" secondAttribute="leading" id="Cz8-pT-2Vl"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xer-42-YPU" secondAttribute="trailing" id="LvN-fn-H36"/>
+                                                <constraint firstItem="Xer-42-YPU" firstAttribute="top" secondItem="gVa-rh-7GH" secondAttribute="top" id="VLB-q2-9UX"/>
+                                                <constraint firstItem="3Kc-ZI-KHc" firstAttribute="top" secondItem="bGc-dD-fP9" secondAttribute="bottom" constant="4" id="a7a-19-iuh"/>
+                                                <constraint firstAttribute="trailing" secondItem="bGc-dD-fP9" secondAttribute="trailing" constant="4" id="yxz-4m-j97"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5IW-zH-d5y"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gVa-rh-7GH" secondAttribute="trailing" id="BQJ-8O-1H4"/>
+                                    <constraint firstItem="gVa-rh-7GH" firstAttribute="top" secondItem="YvZ-ba-bjz" secondAttribute="top" id="ZdX-H4-2Jx"/>
+                                    <constraint firstAttribute="bottom" secondItem="gVa-rh-7GH" secondAttribute="bottom" id="euC-aX-HG4"/>
+                                    <constraint firstItem="gVa-rh-7GH" firstAttribute="leading" secondItem="YvZ-ba-bjz" secondAttribute="leading" id="x2G-wT-lkN"/>
+                                </constraints>
+                                <size key="customSize" width="200" height="260"/>
+                                <connections>
+                                    <outlet property="caption" destination="bGc-dD-fP9" id="ZeG-uY-ZcC"/>
+                                    <outlet property="comment" destination="3Kc-ZI-KHc" id="XkB-gf-vqr"/>
+                                    <outlet property="imageView" destination="Xer-42-YPU" id="g9t-pJ-arg"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="dkm-p3-XyG" id="dXr-q8-PFC"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Zyh-ad-FlB" id="3s0-W6-fmO"/>
+                            <outlet property="delegate" destination="Zyh-ad-FlB" id="K8V-Lj-5ur"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNh-dI-6Sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="381"/>
+        </scene>
+    </scenes>
+</document>
